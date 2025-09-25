@@ -45,8 +45,8 @@ Request Body:
 {
   "email": "user@example.com",
   "password": "password123",
-  "firstName": "John",
-  "lastName": "Doe"
+  "firstName": "user",
+  "lastName": "user"
 }
 
 
@@ -86,8 +86,8 @@ Response:
 {
   "id": 1,
   "email": "user@example.com",
-  "firstName": "John",
-  "lastName": "Doe"
+  "firstName": "user",
+  "lastName": "user"
 }
 
 
