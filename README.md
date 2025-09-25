@@ -115,7 +115,7 @@ Response:
 
 ### Backend (Spring Boot)
 1. Clone the repository:  
-git clone <your-repo-url>
+git clone https://github.com/RishitaGangwal/recruitment-prototype
 
 2. Navigate to backend folder:  
 
@@ -126,9 +126,13 @@ cd server
 
 
 spring.datasource.url=jdbc:mysql://localhost:3306/recruitment_db
+
 spring.datasource.username=
+
 spring.datasource.password==
+
 jwt.secret=
+
 jwt.expiration=3600000
 
 4. Build and run:
