@@ -90,7 +90,6 @@ export default function ProfilePage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-rose-50 via-white to-orange-50">
-      {/* Header */}
       <div className="bg-white/80 backdrop-blur-sm border-b border-rose-100 sticky top-0 z-10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
@@ -107,7 +106,6 @@ export default function ProfilePage() {
         </div>
       </div>
 
-      {/* Main Content */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="bg-white rounded-3xl shadow-lg border border-rose-100 overflow-hidden">
           <div className="bg-gradient-to-r from-rose-500 to-pink-500 px-6 py-5 sm:px-5">

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Eye, EyeOff, User, Mail, Lock, UserPlus } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function RegisterPage() {
   const [form, setForm] = useState({
@@ -15,6 +15,9 @@ export default function RegisterPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [errors, setErrors] = useState({});
   const [isVisible, setIsVisible] = useState(false);
+
+  const navigate = useNavigate();
+
 
   useEffect(() => {
     setIsVisible(true);
@@ -76,6 +79,9 @@ export default function RegisterPage() {
       const data = await res.json();
       setMessage("Registration successful!");
       setForm({ name: "", email: "", password: "", confirmPassword: "" });
+      setTimeout(() => {
+        navigate("/login");
+      }, 1500);
     } catch (err) {
       setMessage(err.message);
     } finally {
@@ -172,7 +178,6 @@ export default function RegisterPage() {
                 )}
               </div>
 
-              {/* Email Field */}
               <div>
                 <label
                   htmlFor="email"
@@ -201,7 +206,6 @@ export default function RegisterPage() {
                 )}
               </div>
 
-              {/* Password Field */}
               <div>
                 <label
                   htmlFor="password"
@@ -298,7 +302,6 @@ export default function RegisterPage() {
                 )}
               </button>
 
-              {/* Message Display */}
               {message && (
                 <div
                   className={`p-4 rounded-lg text-center text-sm lg:text-base transition-all duration-500 transform ${
@@ -312,7 +315,6 @@ export default function RegisterPage() {
               )}
             </div>
 
-            {/* Footer */}
             <div className="text-center pt-4 border-t border-slate-100">
               <p className="text-sm lg:text-base text-slate-600">
                 Already have an account?{" "}
